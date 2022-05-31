@@ -7,25 +7,32 @@ const menuout = document.getElementById("menuOut");
 
 function menuIn() {
   modal.style.display = "block";
-  const target = barIcon;
-  target.classList.remove("menucircle1"),
-    void target.offsetWidth,
-    target.classList.add("menucircle1");
+  barIcon.classList.remove("menucircle1"),
+    void barIcon.offsetWidth,
+    barIcon.classList.add("menucircle1");
+
+  modal.classList.remove("menuUnAnimated"),
+    void modal.offsetWidth;
+
   setTimeout(function () {
     barIcon.className = "fa-thin fa-xmark";
   }, 200);
 };
 
 function menuOut() {
-  setTimeout;
-  modal.style.display = "none";
-  const target = barIcon;
-  target.classList.remove("menucircle2"),
-    void target.offsetWidth,
-    target.classList.add("menucircle2");
+
+  void modal.offsetWidth;
+  modal.classList.add("menuUnAnimated");
+  setTimeout(function () {
+    modal.style.display = "none";
+  }, 400);
+  barIcon.classList.remove("menucircle2"),
+    void barIcon.offsetWidth,
+    barIcon.classList.add("menucircle2");
   setTimeout(function () {
     barIcon.className = "fa-thin fa-bars";
   }, 200);
+
 };
 
 
@@ -33,7 +40,3 @@ menuin.addEventListener("click", menuIn);
 menuout.addEventListener("click", menuOut);
 
 //모달창 구간
-
-function madalMenu() {
-
-}
