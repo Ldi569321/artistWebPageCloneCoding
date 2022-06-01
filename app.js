@@ -38,5 +38,3 @@ function menuOut() {
 
 menuin.addEventListener("click", menuIn);
 menuout.addEventListener("click", menuOut);
-
-//모달창 구간
