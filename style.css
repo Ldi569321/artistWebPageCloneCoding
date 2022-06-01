@@ -258,20 +258,36 @@ aside .aside_box i {
 
 aside .fixed_banner a .fixed_banner1{
     position: fixed;
-    bottom: 167px;
-    right: 0px;
+    bottom: 160px;
+    right: -250px;
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 20vw;
+    max-width: 250px;
+    animation: asideBannerIn 1.5s;
+    animation-fill-mode: forwards;
 }
 
 aside .fixed_banner a .fixed_banner2{
     position: fixed;
     bottom: 47px;
-    right: 0px;
+    right: -250px;
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 20vw;
+    max-width: 250px;
+    animation: asideBannerIn 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes asideBannerIn {
+    from {
+        right: -250px;
+    }
+
+    to {
+        right: 0px;
+    }
 }
 
 .news {
