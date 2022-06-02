@@ -24,7 +24,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     background-attachment: fixed;
-    font-family: 'HallymMjo-Regular'
+    font-family: 'HallymMjo-Regular';
 }
 
 .cloud {
@@ -84,6 +84,7 @@ header {
 
 .fixed {
     position: fixed;
+    z-index: 10;
 }
 
 .menuBtn i {
@@ -157,7 +158,8 @@ header {
         margin: 5% 4%;
         opacity: 0.2;
     }
-    50%{
+
+    50% {
         opacity: 0.9;
     }
 
@@ -171,6 +173,7 @@ header {
     0% {
         opacity: 0.9;
     }
+
     100% {
         opacity: 0.2;
     }
@@ -183,6 +186,7 @@ header {
 .menuUnAnimated {
     animation: menuUnContent 0.4s;
 }
+
 .main {
     height: 80vh;
     display: flex;
@@ -249,7 +253,7 @@ aside .aside_box i {
     color: white;
 }
 
-aside .fixed_banner a .fixed_banner1{
+aside .fixed_banner a .fixed_banner1 {
     position: fixed;
     bottom: 160px;
     right: -250px;
@@ -261,7 +265,7 @@ aside .fixed_banner a .fixed_banner1{
     animation-fill-mode: forwards;
 }
 
-aside .fixed_banner a .fixed_banner2{
+aside .fixed_banner a .fixed_banner2 {
     position: fixed;
     bottom: 47px;
     right: -250px;
@@ -286,4 +290,218 @@ aside .fixed_banner a .fixed_banner2{
 .news {
     display: flex;
     justify-content: center;
+}
+
+.slider {
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    height: 335px;
+    overflow: hidden;
+}
+
+.slider-inner .banner_img1 {
+    width: 600px;
+    height: 355px;
+    background:linear-gradient( 
+        to bottom, rgba(20, 20, 20, 0) 0%, 
+        rgba(20, 20, 20, 0) 25%, 
+        rgba(20, 20, 20, 0.2) 50%, 
+        rgba(20, 20, 20, 0.4) 75%, 
+        rgba(20, 20, 20, 0.7) 100%
+        ), url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner1.jpg);
+        content: "";
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+}
+.slider-inner .banner_img2 {
+    width: 600px;
+    height: 355px;
+    background:linear-gradient( 
+        to bottom, rgba(20, 20, 20, 0) 0%, 
+        rgba(20, 20, 20, 0) 25%, 
+        rgba(20, 20, 20, 0) 50%, 
+        rgba(20, 20, 20, 0.4) 75%, 
+        rgba(20, 20, 20, 0.7) 100%
+        ), url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner2.jpg);
+        content: "";
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+}
+.slider-inner .banner_img3 {
+    width: 600px;
+    height: 355px;
+    background:linear-gradient( 
+        to bottom, rgba(20, 20, 20, 0) 0%, 
+        rgba(20, 20, 20, 0) 25%, 
+        rgba(20, 20, 20, 0) 50%, 
+        rgba(20, 20, 20, 0.4) 75%, 
+        rgba(20, 20, 20, 0.7) 100%
+        ), url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner3.jpg);
+        content: "";
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+}
+.slider-inner .banner_img4 {
+    width: 600px;
+    height: 355px;
+    background:linear-gradient( 
+        to bottom, rgba(20, 20, 20, 0) 0%, 
+        rgba(20, 20, 20, 0) 25%, 
+        rgba(20, 20, 20, 0) 50%, 
+        rgba(20, 20, 20, 0.4) 75%, 
+        rgba(20, 20, 20, 0.7) 100%
+        ), url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner4.jpg);
+        content: "";
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+}
+.slider-inner .banner_img5 {
+    width: 600px;
+    height: 355px;
+    background:linear-gradient( 
+        to bottom, rgba(20, 20, 20, 0) 0%, 
+        rgba(20, 20, 20, 0) 25%, 
+        rgba(20, 20, 20, 0) 50%, 
+        rgba(20, 20, 20, 0.4) 75%, 
+        rgba(20, 20, 20, 0.7) 100%
+        ), url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner5.png);
+        content: "";
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+}
+.slider-inner .banner_img6 {
+    width: 600px;
+    height: 355px;
+    background:linear-gradient( 
+        to bottom, rgba(20, 20, 20, 0) 0%, 
+        rgba(20, 20, 20, 0) 25%, 
+        rgba(20, 20, 20, 0) 50%, 
+        rgba(20, 20, 20, 0.4) 75%, 
+        rgba(20, 20, 20, 0.7) 100%
+        ), url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner6.png);
+        content: "";
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+}
+.slider-inner .banner_img7 {
+    width: 600px;
+    height: 355px;
+    background:linear-gradient( 
+        to bottom, rgba(20, 20, 20, 0) 0%, 
+        rgba(20, 20, 20, 0) 25%, 
+        rgba(20, 20, 20, 0) 50%, 
+        rgba(20, 20, 20, 0.4) 75%, 
+        rgba(20, 20, 20, 0.7) 100%
+        ), url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner7.jpg);
+        content: "";
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+}
+.slider-inner .banner_img8 {
+    width: 600px;
+    height: 355px;
+    background:linear-gradient( 
+        to bottom, rgba(20, 20, 20, 0) 0%, 
+        rgba(20, 20, 20, 0) 25%, 
+        rgba(20, 20, 20, 0) 50%, 
+        rgba(20, 20, 20, 0.4) 75%, 
+        rgba(20, 20, 20, 0.7) 100%
+        ), url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner8.jpg);
+        content: "";
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+}
+.slider-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 4900px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    pointer-events: none;
+}
+
+.slider-item {
+    height: 100%;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.slider-item p {
+    font-size: 15px;
+}
+
+.slider-item .banner_sub_title1 {
+    position: absolute;
+    bottom: 45px;
+    left: 15px;
+}
+
+.slider-item .banner_sub_title2 {
+    position: absolute;
+    bottom: 65px;
+    left: 15px;
+}
+
+.slider-item .banner_title {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.slider .arrow_right{
+    position: absolute;
+    font-size: 70px;
+    color: white;
+    z-index: 4;
+    top: 130px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.slider .arrow_left{
+    position: absolute;
+    font-size: 70px;
+    color: white;
+    z-index: 4;
+    top: 130px;
+    left: 10px;
+    cursor: pointer;
+}
+
+
+.pore {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+.fade {
+    animation: fade;
+}
+
+.bottom_cloud {
+    position: absolute;
+    bottom: 450px;
+    width: 100vw;
 }
