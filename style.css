@@ -263,6 +263,7 @@ aside .fixed_banner a .fixed_banner1 {
     max-width: 250px;
     animation: asideBannerIn 1.5s;
     animation-fill-mode: forwards;
+    z-index: 3;
 }
 
 aside .fixed_banner a .fixed_banner2 {
@@ -275,6 +276,7 @@ aside .fixed_banner a .fixed_banner2 {
     max-width: 250px;
     animation: asideBannerIn 1.5s;
     animation-fill-mode: forwards;
+    z-index: 3;
 }
 
 @keyframes asideBannerIn {
@@ -464,7 +466,7 @@ aside .fixed_banner a .fixed_banner2 {
     position: absolute;
     font-size: 70px;
     color: white;
-    z-index: 4;
+    z-index: 2;
     top: 130px;
     right: 10px;
     cursor: pointer;
@@ -474,7 +476,7 @@ aside .fixed_banner a .fixed_banner2 {
     position: absolute;
     font-size: 70px;
     color: white;
-    z-index: 4;
+    z-index: 2;
     top: 130px;
     left: 10px;
     cursor: pointer;
