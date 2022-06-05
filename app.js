@@ -5,7 +5,7 @@ const barIcon = document.getElementById("icon");
 const menuin = document.getElementById("menuIn");
 const menuout = document.getElementById("menuOut");
 
-function menuIn() {
+menuin.addEventListener("click", () => {
   modal.style.display = "block";
   barIcon.classList.remove("menucircle1"),
     void barIcon.offsetWidth,
@@ -17,9 +17,9 @@ function menuIn() {
   setTimeout(function () {
     barIcon.className = "fa-thin fa-xmark";
   }, 200);
-};
+});
 
-function menuOut() {
+menuout.addEventListener("click", () => {
 
   void modal.offsetWidth;
   modal.classList.add("menuUnAnimated");
@@ -33,76 +33,72 @@ function menuOut() {
     barIcon.className = "fa-thin fa-bars";
   }, 200);
 
-};
+});
 
-
-menuin.addEventListener("click", menuIn);
-menuout.addEventListener("click", menuOut);
 
 //슬라이더 구간
-let slider = document.querySelector(".slider")
-let banner1 = document.querySelector("#banner1");
-let innerSlider = document.querySelector(".slider-inner")
-let pressed = false
-let startx
-let x
+const btn = document.querySelectorAll("button");
+let slider = document.getElementById("slider");
+let innerSlider = document.querySelector(".slider-inner");
+const box = document.querySelectorAll(".box");
+let count = -1;
+let slidenmoved = true;
+const slideNum = document.querySelectorAll(".slider-number i");
 
-slider.addEventListener("mousedown", e => {
-  pressed = true
-  startx = e.offsetX - innerSlider.offsetLeft
-  slider.style.cursor = "pointer"
-})
-
-slider.addEventListener("mouseenter", () => {
-  slider.style.cursor = "pointer"
-})
-
-slider.addEventListener("mouseup", () => {
-  slider.style.cursor = "pointer"
-})
-
-window.addEventListener("mouseup", () => {
-  pressed = false
-})
-
-slider.addEventListener("mousemove", e => {
-  if (!pressed) return
-  e.preventDefault()
-  x = e.offsetX
-
-  innerSlider.style.left = `${x - startx}px`
-  checkboundary()
-})
-
-function checkboundary() {
-  let outer = slider.getBoundingClientRect()
-  let inner = innerSlider.getBoundingClientRect()
-
-  if (parseInt(innerSlider.style.left) > 0) {
-    innerSlider.style.left = "-0px"
-  } else if (inner.right < outer.right) {
-    innerSlider.style.left = `-${inner.width - outer.width}px`
+setInterval(function () {
+  if (count == 0) {
+    slideNum[count].style.color = "white";
+    slideNum[7].style.color = "rgb(49, 83, 145)";
+  } else if (count == 7) {
+    slideNum[count].style.color = "white";
+    slideNum[count - 1].style.color = "rgb(49, 83, 145)";
+  } else if (count <= 6) {
+    slideNum[count].style.color = "white";
+    slideNum[count - 1].style.color = "rgb(49, 83, 145)";
   }
-}
+});
 
-const rightClick = document.getElementById("btnRight");
-const leftClick = document.getElementById("btnLeft");
 
-let plus = 0;
-let rightC = false;
-function onclickRight() {
-  if (plus < 3000) {
-    plus += 300;
-    innerSlider.style.left = `-${plus}px`;
-    anima
+//오른쪽 버튼 클릭시 한칸 넘어감
+btn[0].addEventListener("click", () => {
+  slidenmoved = false;
+  setTimeout(function () {
+    slidenmoved = true;
+  }, 3000);
+  if (count <= box.length - 2) {
+    count++;
+    innerSlider.appendChild(box[count]);
+  } else if (count == box.length - 1) {
+    innerSlider.appendChild(box[0]);
+    count = 0;
+  };
+});
+
+//왼쪽 버튼 클릭시 한칸 뒤로감
+btn[1].addEventListener("click", () => {
+  slidenmoved = false;
+  setTimeout(function () {
+    slidenmoved = true;
+  }, 3000);
+  if (count > -1) {
+    innerSlider.prepend(box[count]);
+    return count = count - 1;
+  } else if (count == -1) {
+    innerSlider.prepend(box[box.length - 1]);
+    return count = box.length - 2;
+  };
+});
+
+//버튼 클릭을 안해도 4초마다 한칸씩 움직임
+//만약 이동 버튼 클릭시 7초뒤에 실행
+setInterval(function () {
+  if (slidenmoved == true) {
+    if (count <= box.length - 2) {
+      count++;
+      innerSlider.appendChild(box[count]);
+    } else if (count == box.length - 1) {
+      innerSlider.appendChild(box[0]);
+      count = 0;
+    }
   }
-};
-function onclickLeft() {
-  if (plus > 0) {
-    plus -= 300;
-    innerSlider.style.left = `-${plus}px`;
-  }
-};
-
-rightClick.addEventListener("click", onclickRight);
-leftClick.addEventListener("click", onclickLeft);
+}, 4000);
