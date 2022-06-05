@@ -46,16 +46,10 @@ let slidenmoved = true;
 const slideNum = document.querySelectorAll(".slider-number i");
 
 setInterval(function () {
-  if (count == 0) {
-    slideNum[count].style.color = "white";
-    slideNum[7].style.color = "rgb(49, 83, 145)";
-  } else if (count == 7) {
-    slideNum[count].style.color = "white";
-    slideNum[count - 1].style.color = "rgb(49, 83, 145)";
-  } else if (count <= 6) {
-    slideNum[count].style.color = "white";
-    slideNum[count - 1].style.color = "rgb(49, 83, 145)";
+  for (i = 0; i <= 7; i++) {
+    slideNum[i].style.color = "rgb(49, 83, 145)";
   }
+  slideNum[count].style.color = "white";
 });
 
 
