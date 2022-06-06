@@ -45,13 +45,6 @@ let count = -1;
 let slidenmoved = true;
 const slideNum = document.querySelectorAll(".slider-number i");
 
-setInterval(function () {
-  for (i = 0; i <= 7; i++) {
-    slideNum[i].style.color = "rgb(49, 83, 145)";
-  }
-  slideNum[count].style.color = "white";
-});
-
 
 //오른쪽 버튼 클릭시 한칸 넘어감
 btn[0].addEventListener("click", () => {
@@ -66,6 +59,10 @@ btn[0].addEventListener("click", () => {
     innerSlider.appendChild(box[0]);
     count = 0;
   };
+  for (i = 0; i <= 7; i++) {
+    slideNum[i].style.color = "rgb(49, 83, 145)";
+  }
+  slideNum[count].style.color = "white";
 });
 
 //왼쪽 버튼 클릭시 한칸 뒤로감
@@ -81,6 +78,10 @@ btn[1].addEventListener("click", () => {
     innerSlider.prepend(box[box.length - 1]);
     return count = box.length - 2;
   };
+  for (i = 0; i <= 7; i++) {
+    slideNum[i].style.color = "rgb(49, 83, 145)";
+  }
+  slideNum[count].style.color = "white";
 });
 
 //버튼 클릭을 안해도 4초마다 한칸씩 움직임
@@ -94,5 +95,24 @@ setInterval(function () {
       innerSlider.appendChild(box[0]);
       count = 0;
     }
+  };
+  for (i = 0; i <= 7; i++) {
+    slideNum[i].style.color = "rgb(49, 83, 145)";
   }
+  slideNum[count].style.color = "white";
 }, 4000);
+
+//오토슬라이드 부분
+let autoSlideBox = document.querySelector(".auto-slide");
+let autoSlide = document.querySelectorAll(".auto-slide div");
+let Acount = -1;
+
+setInterval(() => {
+  if (Acount <= 2) {
+    Acount++;
+    autoSlideBox.appendChild(autoSlide[Acount]);
+  } else if (Acount == 3) {
+    autoSlideBox.appendChild(autoSlide[0]);
+    return Acount = 0;
+  }
+}, 3000)
