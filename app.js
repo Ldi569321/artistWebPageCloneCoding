@@ -107,7 +107,7 @@ let autoSlideBox = document.querySelector(".auto-slide");
 let autoSlide = document.querySelectorAll(".auto-slide div");
 let Acount = -1;
 
-setInterval(() => {
+/* setInterval(() => {
   if (Acount <= 2) {
     Acount++;
     autoSlideBox.appendChild(autoSlide[Acount]);
@@ -115,4 +115,4 @@ setInterval(() => {
     autoSlideBox.appendChild(autoSlide[0]);
     return Acount = 0;
   }
-}, 3000)
+}, 3000) */
