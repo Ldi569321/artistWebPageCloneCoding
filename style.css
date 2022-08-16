@@ -596,3 +596,15 @@ button {
     top: 50vh;
     width: 100vw;
 }
+
+.auto-slide{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100vW;
+    justify-content: center;
+}
+
+.auto-slideBox {
+    padding: 0px 120px;
+}
