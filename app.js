@@ -41,17 +41,28 @@ const btn = document.querySelectorAll("button");
 let slider = document.getElementById("slider");
 let innerSlider = document.querySelector(".slider-inner");
 const box = document.querySelectorAll(".box");
-let count = -1;
+let count;
 let slidenmoved = true;
 const slideNum = document.querySelectorAll(".slider-number i");
 
+window.addEventListener('load', function () {
+  count = 0;
+  innerSlider.appendChild(box[0]);
+  slideWhite();
+})
+function slideWhite() {
+  for (i = 0; i <= 7; i++) {
+    slideNum[i].style.color = "rgb(49, 83, 145)";
+  }
+  slideNum[count].style.color = "white";
+}
 
 //오른쪽 버튼 클릭시 한칸 넘어감
 btn[0].addEventListener("click", () => {
   slidenmoved = false;
   setTimeout(function () {
     slidenmoved = true;
-  }, 3000);
+  });
   if (count <= box.length - 2) {
     count++;
     innerSlider.appendChild(box[count]);
@@ -59,10 +70,7 @@ btn[0].addEventListener("click", () => {
     innerSlider.appendChild(box[0]);
     count = 0;
   };
-  for (i = 0; i <= 7; i++) {
-    slideNum[i].style.color = "rgb(49, 83, 145)";
-  }
-  slideNum[count].style.color = "white";
+  slideWhite();
 });
 
 //왼쪽 버튼 클릭시 한칸 뒤로감
@@ -70,18 +78,23 @@ btn[1].addEventListener("click", () => {
   slidenmoved = false;
   setTimeout(function () {
     slidenmoved = true;
-  }, 3000);
+  });
   if (count > -1) {
     innerSlider.prepend(box[count]);
-    return count = count - 1;
-  } else if (count == -1) {
-    innerSlider.prepend(box[box.length - 1]);
-    return count = box.length - 2;
-  };
-  for (i = 0; i <= 7; i++) {
-    slideNum[i].style.color = "rgb(49, 83, 145)";
+    count = count - 1;
+    if(count == -1) {
+      slideNum[7].style.color = "white";
+      slideNum[0].style.color = "rgb(49, 83, 145)";
+      count = 7
+      innerSlider.prepend(box[box.length]);
+    }else {
+    slideWhite();
   }
-  slideNum[count].style.color = "white";
+  }else if (count == -1) {
+    innerSlider.prepend(box[box.length - 1]);
+    count = box.length - 2;
+    slideWhite();
+  };
 });
 
 //버튼 클릭을 안해도 4초마다 한칸씩 움직임
@@ -107,7 +120,7 @@ let autoSlideBox = document.querySelector(".auto-slide");
 let autoSlide = document.querySelectorAll(".auto-slide div");
 let Acount = -1;
 
-/* setInterval(() => {
+setInterval(() => {
   if (Acount <= 2) {
     Acount++;
     autoSlideBox.appendChild(autoSlide[Acount]);
@@ -115,4 +128,4 @@ let Acount = -1;
     autoSlideBox.appendChild(autoSlide[0]);
     return Acount = 0;
   }
-}, 3000) */
+}, 3000)
