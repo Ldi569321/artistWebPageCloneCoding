@@ -230,7 +230,7 @@ section .hotaruBanner {
     height: 100px;
     border-radius: 50%;
     background-image:
-        url("https://harumakigohan.s3.ap-northeast-2.amazonaws.com/new_thumbnail.png");
+        url("https://cdn.discordapp.com/attachments/1008944010477445201/1008944514725056653/new_thumbnail.png");
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -317,108 +317,6 @@ section:nth-of-type(2) {
     z-index: 1;
 }
 
-.box .slideImg3 {
-    width: 500px;
-    height: 100%;
-    position: absolute;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg,
-            rgba(30, 30, 30, 1) 0%,
-            rgba(50, 50, 50, 0) 50%,
-            rgba(255, 255, 255, 0) 100%),
-        url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner1.jpg);
-    border: none;
-    content: "";
-    background-size: cover;
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom right, left;
-}
-
-.box .slideImg4 {
-    width: 500px;
-    height: 100%;
-    position: absolute;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg,
-            rgba(30, 30, 30, 1) 0%,
-            rgba(50, 50, 50, 0) 50%,
-            rgba(255, 255, 255, 0) 100%),
-        url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner2.jpg);
-    border: none;
-    content: "";
-    background-size: cover;
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom right, left;
-}
-
-.box .slideImg5 {
-    width: 500px;
-    height: 100%;
-    position: absolute;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg,
-            rgba(30, 30, 30, 1) 0%,
-            rgba(50, 50, 50, 0) 50%,
-            rgba(255, 255, 255, 0) 100%),
-        url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner3.jpg);
-    border: none;
-    content: "";
-    background-size: cover;
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom right, left;
-}
-
-.box .slideImg6 {
-    width: 500px;
-    height: 100%;
-    position: absolute;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg,
-            rgba(30, 30, 30, 1) 0%,
-            rgba(50, 50, 50, 0) 50%,
-            rgba(255, 255, 255, 0) 100%),
-        url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner4.jpg);
-    border: none;
-    content: "";
-    background-size: cover;
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom right, left;
-}
-
-.box .slideImg7 {
-    width: 500px;
-    height: 100%;
-    position: absolute;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg,
-            rgba(30, 30, 30, 1) 0%,
-            rgba(50, 50, 50, 0) 50%,
-            rgba(255, 255, 255, 0) 100%),
-        url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner5.png);
-    border: none;
-    content: "";
-    background-size: cover;
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom right, left;
-}
-
-.box .slideImg8 {
-    width: 500px;
-    height: 100%;
-    position: absolute;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg,
-            rgba(30, 30, 30, 1) 0%,
-            rgba(50, 50, 50, 0) 50%,
-            rgba(255, 255, 255, 0) 100%),
-        url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner6.png);
-    border: none;
-    content: "";
-    background-size: cover;
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom right, left;
-}
-
 .box .slideImg1 {
     width: 500px;
     height: 100%;
@@ -428,7 +326,7 @@ section:nth-of-type(2) {
             rgba(30, 30, 30, 1) 0%,
             rgba(50, 50, 50, 0)50%,
             rgba(255, 255, 255, 0.0) 100%),
-        url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner7.jpg);
+        url("https://cdn.discordapp.com/attachments/1008944010477445201/1008944515626844210/slide1.jpg");
     border: none;
     content: "";
     background-size: cover;
@@ -445,7 +343,109 @@ section:nth-of-type(2) {
             rgba(30, 30, 30, 1) 0%,
             rgba(50, 50, 50, 0) 50%,
             rgba(255, 255, 255, 0) 100%),
-        url(https://harumakigohan.s3.ap-northeast-2.amazonaws.com/baner8.jpg);
+        url("https://cdn.discordapp.com/attachments/1008944010477445201/1008944516025307267/slide2.jpg");
+    border: none;
+    content: "";
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+}
+
+.box .slideImg3 {
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg,
+            rgba(30, 30, 30, 1) 0%,
+            rgba(50, 50, 50, 0) 50%,
+            rgba(255, 255, 255, 0) 100%),
+        url("https://cdn.discordapp.com/attachments/1008944010477445201/1008944516268564560/slide3.jpg");
+    border: none;
+    content: "";
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+}
+
+.box .slideImg4 {
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg,
+            rgba(30, 30, 30, 1) 0%,
+            rgba(50, 50, 50, 0) 50%,
+            rgba(255, 255, 255, 0) 100%),
+        url("https://cdn.discordapp.com/attachments/1008944010477445201/1008944516528615496/slide4.png");
+    border: none;
+    content: "";
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+}
+
+.box .slideImg5 {
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg,
+            rgba(30, 30, 30, 1) 0%,
+            rgba(50, 50, 50, 0) 50%,
+            rgba(255, 255, 255, 0) 100%),
+        url("https://cdn.discordapp.com/attachments/1008944010477445201/1008944516830613637/slide5.png");
+    border: none;
+    content: "";
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+}
+
+.box .slideImg6 {
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg,
+            rgba(30, 30, 30, 1) 0%,
+            rgba(50, 50, 50, 0) 50%,
+            rgba(255, 255, 255, 0) 100%),
+        url("https://cdn.discordapp.com/attachments/1008944010477445201/1008944513651318894/slide6.jpg");
+    border: none;
+    content: "";
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+}
+
+.box .slideImg7 {
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg,
+            rgba(30, 30, 30, 1) 0%,
+            rgba(50, 50, 50, 0) 50%,
+            rgba(255, 255, 255, 0) 100%),
+        url("https://cdn.discordapp.com/attachments/1008944010477445201/1008944513982676992/slide7.jpg");
+    border: none;
+    content: "";
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+}
+
+.box .slideImg8 {
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg,
+            rgba(30, 30, 30, 1) 0%,
+            rgba(50, 50, 50, 0) 50%,
+            rgba(255, 255, 255, 0) 100%),
+        url("https://cdn.discordapp.com/attachments/1008944010477445201/1008944562309435532/slide8.jpg");
     border: none;
     content: "";
     background-size: cover;
